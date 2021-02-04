@@ -32,6 +32,7 @@ CREATE TABLE departement(
 
 CREATE TABLE musee(
         ID             Int  Auto_increment  NOT NULL ,
+        PHOTO          Varchar (255) ,
         NOM            Varchar (255) NOT NULL ,
         ADRESSE        Varchar (255) NOT NULL ,
         VILLE          Varchar (255) NOT NULL ,
