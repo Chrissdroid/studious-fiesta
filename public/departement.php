@@ -20,11 +20,11 @@
             $departements = $DepartementRepository->selectAll();
 
             foreach($departements as $departement ) {
-                $departementObj = new Departement($departement);
+                $Departement = new Departement($departement);
                 ?>   
                     <div class="card"> 
-                        <h3> <?= $departementObj->get_nom() ?></h3>
-                        <img style="width:150px" src="<?= $departementObj->get_photo() ?>"/>  
+                        <h3> <?= $Departement->get_nom() ?></h3>
+                        <img style="width:150px" src="<?= $Departement->get_photo() ?>"/>  
                     </div>                    
                 <?php
                     };

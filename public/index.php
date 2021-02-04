@@ -15,10 +15,8 @@
         <?php require '../src/includes/header.php'; ?>
 
         <?php
-
             $MuseeRepository = new MuseeRepository($bdd);
             $musees = $MuseeRepository->selectAll();
-
             foreach($musees as $musee ) {
                 $museeObj = new Musee($musee);
                 ?>   
