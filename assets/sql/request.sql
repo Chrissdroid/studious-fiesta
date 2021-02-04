@@ -22,6 +22,8 @@ VALUES ("Auvergne-Rhône-Alpes","https://cdn.radiofrance.fr/s3/cruiser-productio
 ("Normandie","https://i-det.unimedias.fr/sites/art-de-vivre/files/styles/teaser_front/public/Import/det_Normandie938.jpg?auto=compress%2Cformat&crop=faces%2Cedges&cs=srgb&fit=crop&h=410&w=900"),
 ("Nouvelle-Aquitaine","https://www.leboat.fr/sites/default/files/styles/lbt_imgstyle_gallery_lg/public/images/gallery/nerac_aquitaine_leboat_glg.jpg?itok=-qT8-Knc&timestamp=1524688314"),
 ("Occitanie","https://www.tourisme-occitanie.com/sites/www.tourisme-occitanie.com/files/styles/sommaire/public/thumbnails/image/grands_sites_1.jpg?itok=RX5pqMvn"),
+("Occitanie","https://www.tourisme-occitanie.com/sites/www.tourisme-occitanie.com/files/styles/sommaire/public/thumbnails/image/grands_sites_1.jpg?itok=RX5pqMvn"),
+("Pays de la Loire","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/7d/24/45/l-anse-des-fontaines.jpg?w=1000&h=600&s=1"),
 ("Provence-Alpes-Côte d'Azur","https://www.lagrande-verriere.com/wp-content/uploads/2018/11/luberon-provence-idees-sorties-villages.jpg");
 
 INSERT INTO departement (NOM, NUMERO, PHOTO)
