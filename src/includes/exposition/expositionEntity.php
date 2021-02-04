@@ -3,31 +3,18 @@
 class Exposition
 {
     private $_id;
-    private $_photo;
     private $_nom;
-    private $_adresse;
-    private $_ville;
-    private $_cp;
-    private $_telephone;
-    private $_email;
-    private $_site;
+    private $_date;
     private $_description;
-    private $_idDepartement;
-
+    private $_idMusee;
 
     public function __construct(array $data)
     {
-        $this->set_id($data["ID"]);
-        $this->set_photo($data["PHOTO"]);
+        $this->set_id($data["ID_musee"]);
         $this->set_nom($data["NOM"]);
-        $this->set_adresse($data["ADRESSE"]);
-        $this->set_ville($data["VILLE"]);
-        $this->set_cp($data["CP"]);
-        $this->set_telephone($data["TELEPHONE"]);
-        $this->set_email($data["EMAIL"]);
-        $this->set_site($data["SITE"]);
+        $this->set_date($data["DATE"]);
         $this->set_description($data["DESCRIPTION"]);
-        $this->set_idDepartement($data["ID_departement"]);
+        $this->set_idMusee($data["ID_musee"]);
     }
 
     public function set_id(int $id)
@@ -38,22 +25,9 @@ class Exposition
         $this->_id = $id;
     }
 
-    public function get_id(int $id)
+    public function get_id()
     {
         return $this->_id;
-    }
-
-    public function set_photo(string $photo)
-    {
-        if (!is_string($photo)) {
-            trigger_error("Un string est demandé", E_USER_WARNING);
-        }
-        $this->_photo = $photo;
-    }
-
-    public function get_photo()
-    {
-        return $this->_photo;
     }
 
     public function set_nom(string $nom)
@@ -69,82 +43,17 @@ class Exposition
         return $this->_nom;
     }
 
-    public function set_adresse(string $adresse)
+    public function set_date(string $date)
     {
-        if (!is_string($adresse)) {
+        if (!is_string($date)) {
             trigger_error("Un string est demandé", E_USER_WARNING);
         }
-        $this->_adresse = $adresse;
+        $this->_date = $date;
     }
 
-    public function get_adresse()
+    public function get_date()
     {
-        return $this->_adresse;
-    }
-
-    public function set_ville(string $ville)
-    {
-        if (!is_string($ville)) {
-            trigger_error("Un string est demandé", E_USER_WARNING);
-        }
-        $this->_ville = $ville;
-    }
-
-    public function get_ville()
-    {
-        return $this->_ville;
-    }
-
-    public function set_cp(string $cp)
-    {
-        if (!is_string($cp)) {
-            trigger_error("Un string est demandé", E_USER_WARNING);
-        }
-        $this->_cp = $cp;
-    }
-
-    public function get_cp()
-    {
-        return $this->_cp;
-    }
-
-    public function set_telephone(string $telephone)
-    {
-        if (!is_string($telephone)) {
-            trigger_error("Un string est demandé", E_USER_WARNING);
-        }
-        $this->_telephone = $telephone;
-    }
-
-    public function get_telephone()
-    {
-        return $this->_telephone;
-    }
-
-    public function set_email(string $email)
-    {
-        if (!is_string($email)) {
-            trigger_error("Un string est demandé", E_USER_WARNING);
-        }
-        $this->_email = $email;
-    }
-
-    public function get_email()
-    {
-        return $this->_email;
-    }
-
-    public function set_site(string $site)
-    {
-        if (!is_string($site)) {
-            trigger_error("Un string est demandé", E_USER_WARNING);
-        }
-        $this->_site = $site;
-    }
-
-    public function get_site()
-    {
-        return $this->_site;
+        return $this->_date;
     }
 
     public function set_description(string $description)
@@ -160,13 +69,16 @@ class Exposition
         return $this->_description;
     }
 
-    public function set_idDepartement(?int $idDepartement)
+    public function set_idMusee(int $idMusee)
     {
-        $this->_idDepartement = $idDepartement;
+        if (!is_int($idMusee)) {
+            trigger_error("Un string est demandé", E_USER_WARNING);
+        }
+        $this->_idMusee = $idMusee;
     }
 
-    public function get_idDepartement()
+    public function get_idMusee()
     {
-        return $this->_idDepartement;
+        return $this->_idMusee;
     }
 }
