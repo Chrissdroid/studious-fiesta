@@ -4,13 +4,13 @@ class Region
 {
     private $_id;
     private $_name;
-    private $_image;
+    private $_photo;
 
     public function __construct(array $data)
     {
-        $this->set_id($data["id"]);
-        $this->set_name($data["name"]);
-        $this->set_photo($data["photo"]);
+        $this->set_id($data["ID"]);
+        $this->set_nom($data["NOM"]);
+        $this->set_photo($data["PHOTO"]);
     }
 
     public function set_id(int $id)
@@ -26,17 +26,17 @@ class Region
         return $this->_id;
     }
 
-    public function set_name(string $name)
+    public function set_nom(string $nom)
     {
-        if (!is_string($name)) {
+        if (!is_string($nom)) {
             trigger_error("Un string est demandé", E_USER_WARNING);
         }
-        $this->_name = $name;
+        $this->_nom = $nom;
     }
 
-    public function get_name()
+    public function get_nom()
     {
-        return $this->_name;
+        return $this->_nom;
     }
 
     public function get_photo()
@@ -53,15 +53,15 @@ class Region
     }
 }
 
-$data = [
-    "id" => 0,
-    "name" => "Nom region",
-    "photo" => "image",
-];
+// $data = [
+//     "id" => 0,
+//     "name" => "Nom region",
+//     "photo" => "image",
+// ];
 
-$regionsModel = [];
+// $regionsModel = [];
 
-for ($i = 0; $i < 15; $i++) {
-    $data["id"] = $i;
-    array_push($regionsModel, new Region($data));
-}
+// for ($i = 0; $i < 15; $i++) {
+//     $data["id"] = $i;
+//     array_push($regionsModel, new Region($data));
+// }

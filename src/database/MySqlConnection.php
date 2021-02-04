@@ -18,8 +18,8 @@ class MySqlConnection
     private function set_db()
     {
         try {
-            $pdo =  new \PDO(DB_CONNEXION, DB_USERNAME, DB_PASSWORD);
-            $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_WARNING);
+            $pdo =  new PDO(DB_CONNEXION, DB_USERNAME, DB_PASSWORD);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
             $this->_db = $pdo;
         } catch (PDOException $exception) {
             return $exception;
