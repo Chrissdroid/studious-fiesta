@@ -16,7 +16,7 @@ function bddConnect(): \PDO
 
 	try {
 		return new \PDO("{$CRED['language']}:dbname={$CRED['db']};host={$CRED['host']};port={$CRED['port']};charset=UTF8", $CRED['user'], $CRED['pass']);
-	} catch (PDOException $e) {
+	} catch (\PDOException $e) {
 		echo 'Connexion échouée : ' . $e->getMessage();
 	}
 }
