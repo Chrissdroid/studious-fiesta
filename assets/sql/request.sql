@@ -23,7 +23,7 @@ VALUES ("Auvergne-Rhône-Alpes","https://cdn.radiofrance.fr/s3/cruiser-productio
 ("Nouvelle-Aquitaine","https://www.leboat.fr/sites/default/files/styles/lbt_imgstyle_gallery_lg/public/images/gallery/nerac_aquitaine_leboat_glg.jpg?itok=-qT8-Knc&timestamp=1524688314"),
 ("Occitanie","https://www.tourisme-occitanie.com/sites/www.tourisme-occitanie.com/files/styles/sommaire/public/thumbnails/image/grands_sites_1.jpg?itok=RX5pqMvn"),
 ("Pays de la Loire","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/7d/24/45/l-anse-des-fontaines.jpg?w=1000&h=600&s=1"),
-("Provence-Alpes-Côte d'Azur","https://www.lagrande-verriere.com/wp-content/uploads/2018/11/luberon-provence-idees-sorties-villages.jpg");
+("Provence-Alpes-Côte d'Azur","https://static.lexpress.fr/medias_12235/w_2048%2Ch_1146%2Cc_crop%2Cx_0%2Cy_0/w_640%2Ch_360%2Cc_fill%2Cg_north/v1591176088/cassis-region-provence-alpes-cote-d-azur-calanques_6264338.jpg");
 
 INSERT INTO departement (NOM, NUMERO, PHOTO)
 VALUES ("Ariège",09,"https://media.routard.com/image/07/3/fb-ariege-2.1563073.jpg"),
@@ -31,9 +31,9 @@ VALUES ("Ariège",09,"https://media.routard.com/image/07/3/fb-ariege-2.1563073.j
 ("Tarn",81,"https://www.gites-de-france.com/sites/default/files/styles/facebook_1200x630/public/gorges_tarn_dt.jpg?itok=DcopDqFk"),
 ("Gers",32,"https://www.wikicampers.fr/blog/wp-content/uploads/2015/11/En-route-vers-le-Gers-en-camping-car.jpg");
 
-INSERT INTO musee(NOM, ADRESSE, VILLE, CP, TELEPHONE, EMAIL, SITE, DESCRIPTION)
-VALUES("Musée des Augustins", "21 rue de Metz", "Toulouse", "31000","05 61 22 21 82","museeaugustins@gmail.com","https://www.augustins.org/fr/", "Le musée des Augustins, fondé en 1793, est l'un des plus anciens musées de France avec le Louvre. Hébergé dans un superbe couvent des XIVe et XVe siècles sur 9 000 m² doté d’un cloître intact et complété d’une nouvelle aile au  XIXe s., c’est le musée des beaux-arts de la ville de Toulouse. Ses collections comptent plus de 4 000 œuvres, peintures et sculptures principalement."),
-("Musée Georges-Labit", "17 rue du Japon", "Toulouse","31400", "05 31 22 99 80","museegeorges-labit@gmail.com","https://musees-occitanie.fr/musees/musee-georges-labit/","Grâce à ce grand voyageur, la ville de Toulouse possède aujourd’hui l’un des plus anciens musées d’art asiatique en France.
+INSERT INTO musee(PHOTO, NOM, ADRESSE, VILLE, CP, TELEPHONE, EMAIL, SITE, DESCRIPTION)
+VALUES("https://images.ladepeche.fr/api/v1/images/view/5f6185d23e45460de415761a/large/image.jpg?v=1","Musée des Augustins", "21 rue de Metz", "Toulouse", "31000","05 61 22 21 82","museeaugustins@gmail.com","https://www.augustins.org/fr/", "Le musée des Augustins, fondé en 1793, est l'un des plus anciens musées de France avec le Louvre. Hébergé dans un superbe couvent des XIVe et XVe siècles sur 9 000 m² doté d’un cloître intact et complété d’une nouvelle aile au  XIXe s., c’est le musée des beaux-arts de la ville de Toulouse. Ses collections comptent plus de 4 000 œuvres, peintures et sculptures principalement."),
+("https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mus%C3%A9e_Georges_Labit.jpg/1200px-Mus%C3%A9e_Georges_Labit.jpg","Musée Georges-Labit", "17 rue du Japon", "Toulouse","31400", "05 31 22 99 80","museegeorges-labit@gmail.com","https://musees-occitanie.fr/musees/musee-georges-labit/","Grâce à ce grand voyageur, la ville de Toulouse possède aujourd’hui l’un des plus anciens musées d’art asiatique en France.
 
 Il accueille une des plus belles collections de l’art oriental sur trois millénaires - Inde, Cambodge, Thaïlande, Indonésie, Tibet, Népal, Chine et Japon - ainsi qu'une importante collection égyptienne.
 
