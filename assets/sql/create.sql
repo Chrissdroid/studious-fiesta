@@ -1,3 +1,4 @@
+CREATE DATABASE franceamusee;
 
 use franceamusee;
 
