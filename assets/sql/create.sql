@@ -1,4 +1,4 @@
-CREATE DATABASE franceamusee;
+CREATE DATABASE franceamusee /*!40100 COLLATE 'utf8mb4_general_ci' */;
 
 use franceamusee;
 
