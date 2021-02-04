@@ -1,8 +1,6 @@
 <?php require_once "../src/includes/region/RegionEntity.php" ?>
 <?php require '../src/includes/region/RegionRepository.php' ?>
-<?php require '../src/database/MySqlConnection.php'; ?>
 <?php require '../src/base/initialisation.php'; ?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,9 +21,9 @@
             foreach($regions as $region ) {
                 $regionObj = new Region($region);
                 ?>   
-                    <div class="card" <?= strtolower($regionObj->get_nom())?>> 
+                    <div class="card" > 
                         <h3> <?= $regionObj->get_nom() ?></h3>
-                        <img style="width:150px" src=<?= $regionObj->get_photo() ?>/>  
+                        <img style="width:150px" src="<?= $regionObj->get_photo() ?>"/>  
                     </div>                    
                 <?php
                     };

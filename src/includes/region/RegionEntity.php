@@ -52,16 +52,3 @@ class Region
         $this->_photo = $photo;
     }
 }
-
-// $data = [
-//     "id" => 0,
-//     "name" => "Nom region",
-//     "photo" => "image",
-// ];
-
-// $regionsModel = [];
-
-// for ($i = 0; $i < 15; $i++) {
-//     $data["id"] = $i;
-//     array_push($regionsModel, new Region($data));
-// }
