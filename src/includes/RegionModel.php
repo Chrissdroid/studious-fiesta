@@ -10,7 +10,7 @@ class Region
     {
         $this->set_id($data["id"]);
         $this->set_name($data["name"]);
-        $this->set_image($data["image"]);
+        $this->set_photo($data["photo"]);
     }
 
     public function set_id(int $id)
@@ -39,24 +39,24 @@ class Region
         return $this->_name;
     }
 
-    public function get_image()
+    public function get_photo()
     {
         return $this->_photo;
     }
 
-    public function set_image(string $image)
+    public function set_photo(string $photo)
     {
-        if (!is_string($image)) {
+        if (!is_string($photo)) {
             trigger_error("Un string est demandeé", E_USER_WARNING);
         }
-        $this->_photo = $image;
+        $this->_photo = $photo;
     }
 }
 
 $data = [
     "id" => 0,
     "name" => "Nom region",
-    "image" => "image",
+    "photo" => "image",
 ];
 
 $regionsModel = [];
