@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Chrissdroid/studious-fiesta/issues"
   },
-  "homepage": "https://github.com/Chrissdroid/studious-fiesta#readme"
+  "homepage": "https://github.com/Chrissdroid/studious-fiesta#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta1"
+  }
 }
