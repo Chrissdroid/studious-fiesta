@@ -14,7 +14,6 @@
         <?php require '../src/includes/header.php'; ?>
 
         <?php
-
             $RegionRepository = new RegionRepository($bdd);
             $regions = $RegionRepository->selectAll();
 
