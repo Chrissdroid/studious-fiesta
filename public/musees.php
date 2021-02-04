@@ -36,7 +36,6 @@
                 <?php
                     };
         ?>
-
         <?php require '../src/includes/footer.php'; ?>
     </body>
 
