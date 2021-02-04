@@ -1,11 +1,8 @@
 @import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 
-$theme-colors: (
-    "primary": #01B4B9,
-    "secondary": #E9E8E5
-);
+$primary: #01B4B9;
+$secondary: #E9E8E5;
 
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
@@ -13,6 +10,11 @@ $theme-colors: (
 
 
 body {
-    padding-top: 170px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+main {
+    flex-grow: 1;
+}
