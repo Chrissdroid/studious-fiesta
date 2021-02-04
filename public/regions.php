@@ -17,15 +17,13 @@
 
         <?php
 
-            $MySqlConnection = new MySqlConnection();
-
-            $RegionRepository = new RegionRepository($MySqlConnection->get_db());
+            $RegionRepository = new RegionRepository($bdd);
             $regions = $RegionRepository->selectAll();
 
             foreach($regions as $region ) {
                 $regionObj = new Region($region);
                 ?>   
-                    <div class="region" <?= strtolower($regionObj->get_nom())?>> 
+                    <div class="card" <?= strtolower($regionObj->get_nom())?>> 
                         <h3> <?= $regionObj->get_nom() ?></h3>
                         <img style="width:150px" src=<?= $regionObj->get_photo() ?>/>  
                     </div>                    
