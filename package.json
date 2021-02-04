@@ -1,0 +1,19 @@
+{
+  "name": "studious-fiesta",
+  "version": "1.0.0",
+  "description": "Dev Branch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chrissdroid/studious-fiesta.git"
+  },
+  "author": "Dev'engers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chrissdroid/studious-fiesta/issues"
+  },
+  "homepage": "https://github.com/Chrissdroid/studious-fiesta#readme"
+}
