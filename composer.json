@@ -1,0 +1,12 @@
+{
+    "name": "astroalex/studious-fiesta",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dev'engers",
+            "email": "alexis31.balthazard@gmail.com"
+        }
+    ],
+    "require": {}
+}
