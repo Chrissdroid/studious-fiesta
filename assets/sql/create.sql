@@ -1,35 +1,35 @@
-CREATE DATABASE franceamusee;
+
 use franceamusee;
 
 -- drop permet de supprimer toutes les tables initiée
 SET FOREIGN_KEY_CHECKS = 0;
-DROP TABLE if EXISTS REGION;
-DROP TABLE if EXISTS DEPARTEMENT;
-DROP TABLE if EXISTS MUSEE;
-DROP TABLE if EXISTS MUSEE_VIRTUEL;
-DROP TABLE if EXISTS EXPOSITION;
+DROP TABLE if EXISTS region;
+DROP TABLE if EXISTS departement;
+DROP TABLE if EXISTS musee;
+DROP TABLE if EXISTS musee_virtuel;
+DROP TABLE if EXISTS exposition;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
-CREATE TABLE REGION(
+CREATE TABLE region(
         ID    Int  Auto_increment  NOT NULL ,
         NOM   Varchar (100) NOT NULL ,
         PHOTO Varchar (255) NOT NULL
-	,CONSTRAINT REGION_PK PRIMARY KEY (ID)
+	,CONSTRAINT region_FK PRIMARY KEY (ID)
 )ENGINE=InnoDB;
 
-CREATE TABLE DEPARTEMENT(
+CREATE TABLE departement(
         ID        Int  Auto_increment  NOT NULL ,
         NOM       Varchar (255) NOT NULL ,
         NUMERO    Int NOT NULL ,
         PHOTO     Varchar (255) ,
         ID_REGION Int
-	,CONSTRAINT DEPARTEMENT_PK PRIMARY KEY (ID)
+	,CONSTRAINT departement_PK PRIMARY KEY (ID)
 
-	,CONSTRAINT DEPARTEMENT_REGION_FK FOREIGN KEY (ID_REGION) REFERENCES REGION(ID)
+	,CONSTRAINT departement_region_FK FOREIGN KEY (ID_region) REFERENCES region(ID)
 )ENGINE=InnoDB;
 
-CREATE TABLE MUSEE(
+CREATE TABLE musee(
         ID             Int  Auto_increment  NOT NULL ,
         NOM            Varchar (255) NOT NULL ,
         ADRESSE        Varchar (255) NOT NULL ,
@@ -39,32 +39,32 @@ CREATE TABLE MUSEE(
         EMAIL          Varchar (50) NOT NULL ,
         SITE           Varchar (75) NOT NULL ,
         DESCRIPTION    Text NOT NULL ,
-        ID_DEPARTEMENT Int
-	,CONSTRAINT MUSEE_PK PRIMARY KEY (ID)
+        ID_departement Int
+	,CONSTRAINT musee_PK PRIMARY KEY (ID)
 
-	,CONSTRAINT MUSEE_DEPARTEMENT_FK FOREIGN KEY (ID_DEPARTEMENT) REFERENCES DEPARTEMENT(ID)
+	,CONSTRAINT musee_departement_FK FOREIGN KEY (ID_departement) REFERENCES departement(ID)
 )ENGINE=InnoDB;
 
-CREATE TABLE EXPOSITION(
+CREATE TABLE exposition(
         ID          Int  Auto_increment  NOT NULL ,
         NOM         Varchar (255) NOT NULL ,
         DATE        Datetime NOT NULL ,
         DESCRIPTION Text NOT NULL ,
-        ID_MUSEE    Int
-	,CONSTRAINT EXPOSITION_PK PRIMARY KEY (ID)
+        ID_musee    Int
+	,CONSTRAINT exposition_PK PRIMARY KEY (ID)
 
-	,CONSTRAINT EXPOSITION_MUSEE_FK FOREIGN KEY (ID_MUSEE) REFERENCES MUSEE(ID)
+	,CONSTRAINT exposition_musee_FK FOREIGN KEY (ID_musee) REFERENCES musee(ID)
 )ENGINE=InnoDB;
 
 
-CREATE TABLE MUSEE_VIRTUEL(
+CREATE TABLE musee_virtuel(
         ID          Int  Auto_increment  NOT NULL ,
         DESCRIPTION Text NOT NULL ,
         ID_MUSEE    Int NOT NULL
-	,CONSTRAINT MUSEE_VIRTUEL_PK PRIMARY KEY (ID)
+	,CONSTRAINT musee_virtuel_PK PRIMARY KEY (ID)
 
-	,CONSTRAINT MUSEE_VIRTUEL_MUSEE_FK FOREIGN KEY (ID_MUSEE) REFERENCES MUSEE(ID)
-	,CONSTRAINT MUSEE_VIRTUEL_MUSEE_AK UNIQUE (ID_MUSEE)
+	,CONSTRAINT musee_virtuel_musee_FK FOREIGN KEY (ID_musee) REFERENCES musee(ID)
+	,CONSTRAINT musee_virtuel_musee_AK UNIQUE (ID_musee)
 )ENGINE=InnoDB;
 
 
