@@ -24,3 +24,8 @@ VALUES ("Auvergne-Rhône-Alpes","https://cdn.radiofrance.fr/s3/cruiser-productio
 ("Occitanie","https://www.tourisme-occitanie.com/sites/www.tourisme-occitanie.com/files/styles/sommaire/public/thumbnails/image/grands_sites_1.jpg?itok=RX5pqMvn"),
 ("Provence-Alpes-Côte d'Azur","https://www.lagrande-verriere.com/wp-content/uploads/2018/11/luberon-provence-idees-sorties-villages.jpg");
 
+INSERT INTO departement (NOM, NUMERO, PHOTO)
+VALUES ("Ariège",09,"https://media.routard.com/image/07/3/fb-ariege-2.1563073.jpg"),
+("Haute-Garonne",31,"https://storage.lebonguide.com/crop-1600x700/68/63/F5632CB5-249A-4846-9B1F-CB7ACB5E099F.png"),
+("Tarn",81,"https://www.gites-de-france.com/sites/default/files/styles/facebook_1200x630/public/gorges_tarn_dt.jpg?itok=DcopDqFk"),
+("Gers",32,"https://www.wikicampers.fr/blog/wp-content/uploads/2015/11/En-route-vers-le-Gers-en-camping-car.jpg");
