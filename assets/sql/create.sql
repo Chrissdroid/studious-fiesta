@@ -50,7 +50,7 @@ CREATE TABLE musee(
 CREATE TABLE exposition(
         ID          Int  Auto_increment  NOT NULL ,
         NOM         Varchar (255) NOT NULL ,
-        DATE        Datetime NOT NULL ,
+        DATE        Varchar (255) NOT NULL ,
         DESCRIPTION Text NOT NULL ,
         ID_musee    Int
 	,CONSTRAINT exposition_PK PRIMARY KEY (ID)
