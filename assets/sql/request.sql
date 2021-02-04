@@ -31,3 +31,11 @@ VALUES ("Ariège",09,"https://media.routard.com/image/07/3/fb-ariege-2.1563073.j
 ("Haute-Garonne",31,"https://storage.lebonguide.com/crop-1600x700/68/63/F5632CB5-249A-4846-9B1F-CB7ACB5E099F.png"),
 ("Tarn",81,"https://www.gites-de-france.com/sites/default/files/styles/facebook_1200x630/public/gorges_tarn_dt.jpg?itok=DcopDqFk"),
 ("Gers",32,"https://www.wikicampers.fr/blog/wp-content/uploads/2015/11/En-route-vers-le-Gers-en-camping-car.jpg");
+
+INSERT INTO musee(NOM, ADRESSE, VILLE, CP, TELEPHONE, EMAIL, SITE, DESCRIPTION)
+VALUES("Musée des Augustins", "21 rue de Metz", "Toulouse", "31000","05 61 22 21 82","museeaugustins@gmail.com","https://www.augustins.org/fr/", "Le musée des Augustins, fondé en 1793, est l'un des plus anciens musées de France avec le Louvre. Hébergé dans un superbe couvent des XIVe et XVe siècles sur 9 000 m² doté d’un cloître intact et complété d’une nouvelle aile au  XIXe s., c’est le musée des beaux-arts de la ville de Toulouse. Ses collections comptent plus de 4 000 œuvres, peintures et sculptures principalement."),
+("Musée Georges-Labit", "17 rue du Japon", "Toulouse","31400", "05 31 22 99 80","museegeorges-labit@gmail.com","https://musees-occitanie.fr/musees/musee-georges-labit/","Grâce à ce grand voyageur, la ville de Toulouse possède aujourd’hui l’un des plus anciens musées d’art asiatique en France.
+
+Il accueille une des plus belles collections de l’art oriental sur trois millénaires - Inde, Cambodge, Thaïlande, Indonésie, Tibet, Népal, Chine et Japon - ainsi qu'une importante collection égyptienne.
+
+A eux seuls, le pavillon mauresque et son jardin de plantes asiatiques et méditerranéennes (azalées, bambous, fougères arborescentes, palmiers…) proches du canal du midi (classé patrimoine mondial par l'UNESCO), méritent le détour.");
