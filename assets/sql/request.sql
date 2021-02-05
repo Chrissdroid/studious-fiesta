@@ -25,17 +25,17 @@ VALUES ("Auvergne-Rhône-Alpes","https://cdn.radiofrance.fr/s3/cruiser-productio
 ("Pays de la Loire","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/7d/24/45/l-anse-des-fontaines.jpg?w=1000&h=600&s=1"),
 ("Provence-Alpes-Côte d'Azur","https://static.lexpress.fr/medias_12235/w_2048%2Ch_1146%2Cc_crop%2Cx_0%2Cy_0/w_640%2Ch_360%2Cc_fill%2Cg_north/v1591176088/cassis-region-provence-alpes-cote-d-azur-calanques_6264338.jpg");
 
-INSERT INTO departement (NOM, NUMERO, PHOTO)
-VALUES ("Ariège",09,"https://media.routard.com/image/07/3/fb-ariege-2.1563073.jpg"),
-("Haute-Garonne",31,"https://storage.lebonguide.com/crop-1600x700/68/63/F5632CB5-249A-4846-9B1F-CB7ACB5E099F.png"),
-("Tarn",81,"https://www.gites-de-france.com/sites/default/files/styles/facebook_1200x630/public/gorges_tarn_dt.jpg?itok=DcopDqFk"),
-("Gers",32,"https://www.wikicampers.fr/blog/wp-content/uploads/2015/11/En-route-vers-le-Gers-en-camping-car.jpg");
+INSERT INTO departement (NOM, NUMERO, PHOTO, ID_region)
+VALUES ("Ariège",09,"https://media.routard.com/image/07/3/fb-ariege-2.1563073.jpg",11),
+("Haute-Garonne",31,"https://storage.lebonguide.com/crop-1600x700/68/63/F5632CB5-249A-4846-9B1F-CB7ACB5E099F.png",11),
+("Tarn",81,"https://www.gites-de-france.com/sites/default/files/styles/facebook_1200x630/public/gorges_tarn_dt.jpg?itok=DcopDqFk",11),
+("Gers",32,"https://www.wikicampers.fr/blog/wp-content/uploads/2015/11/En-route-vers-le-Gers-en-camping-car.jpg",11);
 
-INSERT INTO musee(PHOTO, NOM, ADRESSE, VILLE, CP, TELEPHONE, EMAIL, SITE, DESCRIPTION)
-VALUES("https://images.ladepeche.fr/api/v1/images/view/5f6185d23e45460de415761a/large/image.jpg?v=1","Musée des Augustins", "21 rue de Metz", "Toulouse", "31000","05 61 22 21 82","museeaugustins@gmail.com","https://www.augustins.org/fr/", "Le musée des Augustins, fondé en 1793, est l'un des plus anciens musées de France avec le Louvre. Hébergé dans un superbe couvent des XIVe et XVe siècles sur 9 000 m² doté d’un cloître intact et complété d’une nouvelle aile au  XIXe s., c’est le musée des beaux-arts de la ville de Toulouse. Ses collections comptent plus de 4 000 œuvres, peintures et sculptures principalement."),
+INSERT INTO musee(PHOTO, NOM, ADRESSE, VILLE, CP, TELEPHONE, EMAIL, SITE, DESCRIPTION, ID_departement)
+VALUES("https://images.ladepeche.fr/api/v1/images/view/5f6185d23e45460de415761a/large/image.jpg?v=1","Musée des Augustins", "21 rue de Metz", "Toulouse", "31000","05 61 22 21 82","museeaugustins@gmail.com","https://www.augustins.org/fr/", "Le musée des Augustins, fondé en 1793, est l'un des plus anciens musées de France avec le Louvre. Hébergé dans un superbe couvent des XIVe et XVe siècles sur 9 000 m² doté d’un cloître intact et complété d’une nouvelle aile au  XIXe s., c’est le musée des beaux-arts de la ville de Toulouse. Ses collections comptent plus de 4 000 œuvres, peintures et sculptures principalement.",2),
 ("https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mus%C3%A9e_Georges_Labit.jpg/1200px-Mus%C3%A9e_Georges_Labit.jpg","Musée Georges-Labit", "17 rue du Japon", "Toulouse","31400", "05 31 22 99 80","museegeorges-labit@gmail.com","https://musees-occitanie.fr/musees/musee-georges-labit/","Grâce à ce grand voyageur, la ville de Toulouse possède aujourd’hui l’un des plus anciens musées d’art asiatique en France.
 Il accueille une des plus belles collections de l’art oriental sur trois millénaires - Inde, Cambodge, Thaïlande, Indonésie, Tibet, Népal, Chine et Japon - ainsi qu'une importante collection égyptienne.
-A eux seuls, le pavillon mauresque et son jardin de plantes asiatiques et méditerranéennes (azalées, bambous, fougères arborescentes, palmiers…) proches du canal du midi (classé patrimoine mondial par l'UNESCO), méritent le détour.");
+A eux seuls, le pavillon mauresque et son jardin de plantes asiatiques et méditerranéennes (azalées, bambous, fougères arborescentes, palmiers…) proches du canal du midi (classé patrimoine mondial par l'UNESCO), méritent le détour.",2);
 
 INSERT INTO exposition(NOM, DATE, DESCRIPTION, ID_musee)
 VALUES
