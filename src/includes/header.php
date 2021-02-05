@@ -7,10 +7,11 @@
                 <div class="text-center">
                     <span class="h1">France à Musée</span>
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a class="btn btn-outline-secondary active" href="">Régions</a></li>
-                        <li class="list-inline-item"><a class="btn btn-outline-secondary" href="">Expositions</a></li>
-                        <li class="list-inline-item"><a class="btn btn-outline-secondary" href="">Visistes virtuelles</a></li>
-                        <li class="list-inline-item"><a class="btn btn-outline-secondary" href="">Contacts</a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-secondary active" href="./regions.php">Régions</a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-secondary" href="./departement.php">Departements</a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-secondary" href="./expositions.php">Expositions</a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-secondary" href="./visites-virtuelles.php">Visistes virtuelles</a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-secondary" href="./contacts.php">Contacts</a></li>
                     </ul>
                 </div>
                 <div class="row g-2">

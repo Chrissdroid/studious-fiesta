@@ -14,16 +14,15 @@
         <?php require '../src/includes/header.php'; ?>
 
         <?php
-
             $RegionRepository = new RegionRepository($bdd);
             $regions = $RegionRepository->selectAll();
 
             foreach($regions as $region ) {
-                $regionObj = new Region($region);
+                $Region = new Region($region);
                 ?>   
                     <div class="card" > 
-                        <h3> <?= $regionObj->get_nom() ?></h3>
-                        <img style="width:150px" src="<?= $regionObj->get_photo() ?>"/>  
+                        <h3> <?= $Region->get_nom() ?></h3>
+                        <img style="width:150px" src="<?= $Region->get_photo() ?>"/>  
                     </div>                    
                 <?php
                     };
