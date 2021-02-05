@@ -53,7 +53,7 @@
     <?php
         $departementsParRegions = $DepartementRepository->getByRegion($_GET['region']);
         foreach ($departementsParRegions as $departementParRegion) : ?>
-            <a href="./departement.php?departement=<?= $departementParRegion['ID'] ?>" class="card m-5" style="width: 18rem; height:20rem;">
+            <a href="./departement.php?departement=<?= $departementParRegion['ID'] ?>" class="card m-5 pouet" style="width: 18rem; height:20rem;">
                 <h3 class="card-title text-center"> <?= $departementParRegion['NOM'] ?></h3>
                 <img class="card-img-bottom" style="width: 100%; height: 100%;" src="<?= $departementParRegion['PHOTO'] ?>" />
             </a>
@@ -64,7 +64,7 @@
     <div class="d-flex flex-row justify-content-around flex-wrap ">
     <?php       
         foreach ($departements as $departement) : $Departement = new Departement($departement); ?>
-            <a href="./departement.php?departement=<?= $Departement->get_id() ?>" class="card m-5" style="width: 18rem; height:20rem;">
+            <a href="./departement.php?departement=<?= $Departement->get_id() ?>" class="card m-5 pouet" style="width: 18rem; height:20rem;">
                 <h3 class="card-title text-center"> <?= $Departement->get_nom() ?></h3>
                 <img class="card-img-bottom" style="width: 100%; height: 100%;" src="<?= $Departement->get_photo() ?>" />
             </a>
