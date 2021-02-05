@@ -20,7 +20,7 @@
             foreach($regions as $region ) {
                 $Region = new Region($region);
                 ?>   
-                    <a href="<?= $Region->get_nom() ?>" class="card" >
+                    <a href="/departement.php?region=<?= $Region->get_id() ?>" class="card" >
                         <h3> <?= $Region->get_nom() ?></h3>
                         <img style="width:150px" src="<?= $Region->get_photo() ?>"/>  
                     </a>
