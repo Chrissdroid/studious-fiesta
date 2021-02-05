@@ -6,7 +6,7 @@
                 </div>
                 <div class="text-center">
                     <span class="h1">France à Musée</span>
-                    <ul class="list-inline">
+                    <ul class="list-inline my-5">
                         <li class="list-inline-item"><a class="btn btn-outline-secondary active" href="./regions.php">Régions</a></li>
                         <li class="list-inline-item"><a class="btn btn-outline-secondary" href="./departement.php">Departements</a></li>
                         <li class="list-inline-item"><a class="btn btn-outline-secondary" href="./expositions.php">Expositions</a></li>
