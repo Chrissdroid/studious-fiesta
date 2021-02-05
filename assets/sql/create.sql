@@ -39,7 +39,7 @@ CREATE TABLE musee(
         CP             Varchar (25) NOT NULL ,
         TELEPHONE      Varchar (15) NOT NULL ,
         EMAIL          Varchar (50) NOT NULL ,
-        SITE           Varchar (75) NOT NULL ,
+        SITE           Varchar (500) NOT NULL ,
         DESCRIPTION    Text NOT NULL ,
         ID_departement Int
 	,CONSTRAINT musee_PK PRIMARY KEY (ID)
