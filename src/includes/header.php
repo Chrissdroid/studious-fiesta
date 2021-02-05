@@ -2,7 +2,7 @@
         <nav class="navbar bg-primary">
             <div class="container">
                 <div class="w-25">
-                    <img class="w-100" src="https://cdn.discordapp.com/attachments/806439545855279144/807164798218272778/finallogo.png">
+                    <img class="w-100" src="https://cdn.discordapp.com/attachments/806439545855279144/807199692974063636/vfinalelogofunky1.png">
                 </div>
                 <div class="text-center">
                     <span class="h1">France à Musée</span>
