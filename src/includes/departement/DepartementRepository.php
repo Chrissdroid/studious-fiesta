@@ -20,4 +20,12 @@ class DepartementRepository
         $req->execute();
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getMusee(int $id)
+    {
+        $req = $this->get_db()->prepare("SELECT musee.NOM FROM musee inner join departement d on musee.ID_departement = d.ID where ID_departement = :id");
+        $req->bindParam(':id', $id, PDO::PARAM_INT);
+        $req->execute();
+        return $req->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

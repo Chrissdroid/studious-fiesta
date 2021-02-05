@@ -7,31 +7,35 @@
 <html lang="fr">
 
 <head>
-	<?php require '../src/includes/head.php'; ?>
-	<title>Département</title>
+    <?php require '../src/includes/head.php'; ?>
+    <title>Département</title>
 </head>
 
-    <body>
-        <?php require '../src/includes/header.php'; ?>
+<body>
+<?php require '../src/includes/header.php'; ?>
 
-        <?php
+<?php
 
-            $DepartementRepository = new DepartementRepository($bdd);
-            $departements = $DepartementRepository->selectAll();
+$DepartementRepository = new DepartementRepository($bdd);
+$departements = $DepartementRepository->selectAll();
 
-            foreach($departements as $departement ) {
-                $Departement = new Departement($departement);
-                ?>   
-                    <div class="card"> 
-                        <h3> <?= $Departement->get_nom() ?></h3>
-                        <img style="width:150px" src="<?= $Departement->get_photo() ?>"/>  
-                    </div>                    
-                <?php
-                    };
-        ?>
+if (isset($_GET) && !empty($_GET['departement'])): ?>
 
-        <?php require '../src/includes/footer.php'; ?>
-    </body>
+<?php
+    $musees = $DepartementRepository->getMusee($_GET['departement']);
+    foreach ($musees as $musee) :
+?>
+<pre><?= var_dump($musee) ?></pre>
+<?php endforeach; ?>
+<?php else:
+foreach ($departements as $departement) : $Departement = new Departement($departement); ?>
+    <a href="http://localhost:8000/departement.php?departement=<?= $Departement->get_id() ?>" class="card">
+        <h3> <?= $Departement->get_nom() ?></h3>
+        <img style="width:150px" src="<?= $Departement->get_photo() ?>"/>
+    </a>
+<?php endforeach; endif; ?>
+<?php require '../src/includes/footer.php'; ?>
+</body>
 
 </html>
 

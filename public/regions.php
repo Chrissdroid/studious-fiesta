@@ -20,10 +20,10 @@
             foreach($regions as $region ) {
                 $Region = new Region($region);
                 ?>   
-                    <div class="card" > 
+                    <a href="<?= $Region->get_nom() ?>" class="card" >
                         <h3> <?= $Region->get_nom() ?></h3>
                         <img style="width:150px" src="<?= $Region->get_photo() ?>"/>  
-                    </div>                    
+                    </a>
                 <?php
                     };
         ?>
