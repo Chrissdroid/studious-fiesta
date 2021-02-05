@@ -28,4 +28,5 @@ class MuseeRepository
         $req->execute();
         return $req->fetch();
     }
+
 }

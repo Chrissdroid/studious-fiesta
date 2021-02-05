@@ -38,7 +38,7 @@ class Musee
         $this->_id = $id;
     }
 
-    public function get_id(int $id)
+    public function get_id()
     {
         return $this->_id;
     }
