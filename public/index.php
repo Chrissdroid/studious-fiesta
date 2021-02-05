@@ -1,7 +1,6 @@
-<?php require_once "../src/includes/musee/MuseeEntity.php" ?>
-<?php require '../src/includes/musee/MuseeRepository.php' ?>
+<?php require_once "../src/includes/region/RegionEntity.php" ?>
+<?php require '../src/includes/region/RegionRepository.php' ?>
 <?php require '../src/base/initialisation.php'; ?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,25 +14,20 @@
         <?php require '../src/includes/header.php'; ?>
 
         <?php
-            $MuseeRepository = new MuseeRepository($bdd);
-            $musees = $MuseeRepository->selectAll();
-            foreach($musees as $musee ) {
-                $museeObj = new Musee($musee);
+            $RegionRepository = new RegionRepository($bdd);
+            $regions = $RegionRepository->selectAll();
+
+            foreach($regions as $region ) {
+                $Region = new Region($region);
                 ?>   
-                    <div class="card"> 
-                        <h3><?= $museeObj->get_nom() ?></h3>
-                        <img style="width:150px" src="<?= $museeObj->get_photo() ?>"/>  
-                        <p><?= $museeObj->get_description() ?></p>
-                        <div>
-                        <p><?= $museeObj->get_adresse() ?></p>
-                        <p><?= $museeObj->get_ville() ?> <?= $museeObj->get_cp() ?> </p>
-                        <p><?= $museeObj->get_telephone()?> </p>
-                        <p><?= $museeObj->get_site()?> </p>
-                        </div>
+                    <div class="card" > 
+                        <h3> <?= $Region->get_nom() ?></h3>
+                        <img style="width:150px" src="<?= $Region->get_photo() ?>"/>  
                     </div>                    
                 <?php
                     };
         ?>
+
         <?php require '../src/includes/footer.php'; ?>
     </body>
 

@@ -28,4 +28,12 @@ class MuseeRepository
         $req->execute();
         return $req->fetch();
     }
+
+    public function selectByName(string $name):Array
+	{
+        $req = $this->get_db()->prepare("SELECT * FROM musee WHERE name = :name LIMIT 10");
+        $req->bindParam(':name', $name, PDO::PARAM_STR);
+        $req->execute();
+        return $req->fetchAll();
+    }
 }
