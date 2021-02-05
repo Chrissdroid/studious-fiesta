@@ -20,4 +20,5 @@ class ExpositionRepository
         $req->execute();
         return $req->fetchAll(PDO::FETCH_ASSOC);
     }
+
 }

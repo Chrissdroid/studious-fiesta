@@ -11,7 +11,7 @@
 </head>
 
     <body>
-        <?php require '../src/includes/header.php'; ?>
+        <?php require '../src/includes/header.php';?>
 
         <?php
             $RegionRepository = new RegionRepository($bdd);

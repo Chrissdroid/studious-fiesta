@@ -27,8 +27,9 @@
                     <li class="breadcrumb-item"><a href="#">Occitanie</a></li>
                     <li class="breadcrumb-item active">Toulouse</li>
                 </ul>
-                <form action="search.php">
-                    <input type="text" placeholder="Recherche...">
+                <form action="./musees.php">
+                    <input type="text" name="search" placeholder="Recherche...">
+                    <input type="submit" >
                 </form>
             </div>
         </div>

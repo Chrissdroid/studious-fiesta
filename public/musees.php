@@ -8,34 +8,41 @@
 
 <head>
 	<?php require '../src/includes/head.php'; ?>
-	<title>Bienvenue</title>
+    <script defer src="dist/js/search.js" defer></script>
+    <title>Bienvenue</title>
+    <meta title="search" content=<?= $_GET["search"]?>>
 </head>
 
     <body>
         <?php require '../src/includes/header.php'; ?>
-
+        <style> 
+            .not-visible {
+            display:none;
+        }  
+        </style>
         <?php
-
             $MuseeRepository = new MuseeRepository($bdd);
             $musees = $MuseeRepository->selectAll();
-
-            foreach($musees as $musee ) {
+            $search = filter_input(INPUT_GET,"search",FILTER_SANITIZE_SPECIAL_CHARS);
+            
+            foreach($musees as $musee) {
                 $Musee = new Musee($musee);
                 ?>   
-                    <div class="card"> 
-                        <h3><?= $Musee->get_nom() ?></h3>
+                    <div class="card not-visible" id="<?= $Musee->get_id()?>"> 
+                        <h3 class="nom"><?= $Musee->get_nom() ?></h3>
                         <img style="width:150px" src="<?= $Musee->get_photo() ?>"/>  
-                        <p><?= $Musee->get_description() ?></p>
+                        <p class="description"><?= $Musee->get_description() ?></p>
                         <div>
-                        <p><?= $Musee->get_adresse() ?></p>
-                        <p><?= $Musee->get_ville() ?> <?= $Musee->get_cp() ?> </p>
-                        <p><?= $Musee->get_telephone()?> </p>
-                        <p><?= $Musee->get_site()?> </p>
+                        <p class="adress"><?= $Musee->get_adresse() ?></p>
+                        <p class="ville"><?= $Musee->get_ville()?> <?= $Musee->get_cp()?></p>
+                        <p class="phone"><?= $Musee->get_telephone()?> </p>
+                        <p class="website"><?= $Musee->get_site()?> </p>
                         </div>
                     </div>                    
                 <?php
                     };
         ?>
+    
         <?php require '../src/includes/footer.php'; ?>
     </body>
 
