@@ -1,12 +1,12 @@
     <header class="sticky-top">
         <nav class="navbar bg-primary">
             <div class="container">
-                <div>
-                    <img src="https://picsum.photos/100">
+                <div class="w-25">
+                    <img class="w-100" src="https://cdn.discordapp.com/attachments/806439545855279144/807164798218272778/finallogo.png">
                 </div>
                 <div class="text-center">
                     <span class="h1">France à Musée</span>
-                    <ul class="list-inline">
+                    <ul class="list-inline my-5">
                         <li class="list-inline-item"><a class="btn btn-outline-secondary active" href="./regions.php">Régions</a></li>
                         <li class="list-inline-item"><a class="btn btn-outline-secondary" href="./departement.php">Departements</a></li>
                         <li class="list-inline-item"><a class="btn btn-outline-secondary" href="./expositions.php">Expositions</a></li>
